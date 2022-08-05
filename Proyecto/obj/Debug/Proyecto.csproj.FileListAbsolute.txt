@@ -1,0 +1,35 @@
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\bin\Debug\Proyecto.exe.config
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\bin\Debug\Proyecto.exe
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\bin\Debug\Proyecto.pdb
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\bin\Debug\itextsharp.dll
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\bin\Debug\itextsharp.xmlworker.dll
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\bin\Debug\itextsharp.xml
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.Form1.resources
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.exe
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.pdb
+D:\WorkSpaceAD\YOUTUBE\031_FUNCIONALIDAD GENERAR REPORTE\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\itextsharp.dll
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\itextsharp.xml
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.Form1.resources
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\AForge.dll
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\AForge.Video.dll
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\AForge.xml
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\AForge.Video.xml
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\AForge.Video.DirectShow.xml
