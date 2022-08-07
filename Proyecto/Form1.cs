@@ -30,8 +30,10 @@ namespace Proyecto
 
             string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE", txtnombres.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", txtdocumento.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CELULAR", txtdescripcion.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@APELLIDO", txtApellidos.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@EDAD", txtEdad.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@GENERO", txtGenero.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DIAGNOSTICO", txtDiagnostico.Text);
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
            
 
@@ -126,6 +128,7 @@ namespace Proyecto
 
         private void btnTakePhoto_Click(object sender, EventArgs e)
         {
+            groupBox2.Visible = true;
             if (MyWebCam != null && MyWebCam.IsRunning)
             {
                 picBox2.Image = picBox1.Image;
