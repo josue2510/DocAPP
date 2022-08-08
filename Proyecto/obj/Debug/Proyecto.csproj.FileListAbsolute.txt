@@ -58,3 +58,7 @@ C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Debug\Proyecto.exe.ma
 C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Debug\Proyecto.application
 C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Debug\Proyecto.exe.manifest
 C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Debug\Proyecto.application
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\Proyecto.exe.manifest
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\bin\Debug\Proyecto.application
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.exe.manifest
+C:\Users\froil\Downloads\ProyectoPDF\Proyecto\obj\Debug\Proyecto.application

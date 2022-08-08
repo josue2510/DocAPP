@@ -101,9 +101,9 @@ namespace Proyecto
                 MyWebCam = null;
             }
         }
-        private void Capture(object sender, NewFrameEventArgs eventArgs)
+        private new void Capture(object sender, NewFrameEventArgs eventArgs)
         {
-            Bitmap image = (Bitmap)eventArgs.Frame.Clone();
+            Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox1.Width,picBox1.Height));
             picBox1.Image = image;
         }
 
