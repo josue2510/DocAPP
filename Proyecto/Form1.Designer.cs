@@ -63,10 +63,10 @@
             this.btndescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndescargar.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndescargar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btndescargar.Location = new System.Drawing.Point(958, 876);
-            this.btndescargar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btndescargar.Location = new System.Drawing.Point(959, 142);
+            this.btndescargar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btndescargar.Name = "btndescargar";
-            this.btndescargar.Size = new System.Drawing.Size(205, 35);
+            this.btndescargar.Size = new System.Drawing.Size(205, 36);
             this.btndescargar.TabIndex = 0;
             this.btndescargar.Text = "Terminar y Guardar";
             this.btndescargar.UseVisualStyleBackColor = false;
@@ -76,7 +76,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 30);
+            this.label1.Location = new System.Drawing.Point(7, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 16);
@@ -86,8 +86,8 @@
             // txtnombres
             // 
             this.txtnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombres.Location = new System.Drawing.Point(150, 30);
-            this.txtnombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnombres.Location = new System.Drawing.Point(150, 29);
+            this.txtnombres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtnombres.Name = "txtnombres";
             this.txtnombres.Size = new System.Drawing.Size(396, 22);
             this.txtnombres.TabIndex = 88;
@@ -101,10 +101,10 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtnombres);
-            this.groupBox1.Location = new System.Drawing.Point(15, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(15, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Size = new System.Drawing.Size(569, 167);
             this.groupBox1.TabIndex = 89;
             this.groupBox1.TabStop = false;
@@ -113,7 +113,7 @@
             // 
             this.txtGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGenero.Location = new System.Drawing.Point(93, 119);
-            this.txtGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGenero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(205, 22);
             this.txtGenero.TabIndex = 96;
@@ -122,7 +122,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 75);
+            this.label7.Location = new System.Drawing.Point(7, 76);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 16);
@@ -132,8 +132,8 @@
             // txtEdad
             // 
             this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(93, 75);
-            this.txtEdad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEdad.Location = new System.Drawing.Point(93, 76);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(205, 22);
             this.txtEdad.TabIndex = 95;
@@ -152,7 +152,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 72);
+            this.label2.Location = new System.Drawing.Point(7, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
@@ -162,11 +162,11 @@
             // 
             this.groupBox2.Controls.Add(this.txtDiagnostico);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(595, 16);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(595, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(569, 167);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(569, 117);
             this.groupBox2.TabIndex = 91;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Diagnóstico";
@@ -174,11 +174,11 @@
             // txtDiagnostico
             // 
             this.txtDiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiagnostico.Location = new System.Drawing.Point(15, 27);
-            this.txtDiagnostico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiagnostico.Location = new System.Drawing.Point(15, 26);
+            this.txtDiagnostico.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";
-            this.txtDiagnostico.Size = new System.Drawing.Size(542, 115);
+            this.txtDiagnostico.Size = new System.Drawing.Size(542, 72);
             this.txtDiagnostico.TabIndex = 0;
             // 
             // cboDevices
@@ -186,7 +186,7 @@
             this.cboDevices.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDevices.FormattingEnabled = true;
             this.cboDevices.Location = new System.Drawing.Point(108, 196);
-            this.cboDevices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboDevices.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDevices.Name = "cboDevices";
             this.cboDevices.Size = new System.Drawing.Size(251, 24);
             this.cboDevices.TabIndex = 93;
@@ -195,7 +195,7 @@
             // picBox1
             // 
             this.picBox1.Location = new System.Drawing.Point(14, 230);
-            this.picBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picBox1.Name = "picBox1";
             this.picBox1.Size = new System.Drawing.Size(569, 638);
             this.picBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -205,8 +205,8 @@
             // btnTakePhoto
             // 
             this.btnTakePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakePhoto.Location = new System.Drawing.Point(478, 191);
-            this.btnTakePhoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTakePhoto.Location = new System.Drawing.Point(478, 192);
+            this.btnTakePhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTakePhoto.Name = "btnTakePhoto";
             this.btnTakePhoto.Size = new System.Drawing.Size(93, 31);
             this.btnTakePhoto.TabIndex = 97;
@@ -217,7 +217,7 @@
             // picBox2
             // 
             this.picBox2.Location = new System.Drawing.Point(595, 230);
-            this.picBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picBox2.Name = "picBox2";
             this.picBox2.Size = new System.Drawing.Size(569, 638);
             this.picBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -249,8 +249,8 @@
             // btnTakePhoto2
             // 
             this.btnTakePhoto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakePhoto2.Location = new System.Drawing.Point(1059, 191);
-            this.btnTakePhoto2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTakePhoto2.Location = new System.Drawing.Point(1059, 192);
+            this.btnTakePhoto2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTakePhoto2.Name = "btnTakePhoto2";
             this.btnTakePhoto2.Size = new System.Drawing.Size(93, 31);
             this.btnTakePhoto2.TabIndex = 100;
@@ -262,8 +262,8 @@
             // 
             this.cboDevices2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDevices2.FormattingEnabled = true;
-            this.cboDevices2.Location = new System.Drawing.Point(689, 196);
-            this.cboDevices2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboDevices2.Location = new System.Drawing.Point(690, 196);
+            this.cboDevices2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDevices2.Name = "cboDevices2";
             this.cboDevices2.Size = new System.Drawing.Size(251, 24);
             this.cboDevices2.TabIndex = 101;
@@ -272,8 +272,8 @@
             // btnCaptureAgain
             // 
             this.btnCaptureAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaptureAgain.Location = new System.Drawing.Point(378, 191);
-            this.btnCaptureAgain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCaptureAgain.Location = new System.Drawing.Point(378, 192);
+            this.btnCaptureAgain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCaptureAgain.Name = "btnCaptureAgain";
             this.btnCaptureAgain.Size = new System.Drawing.Size(93, 31);
             this.btnCaptureAgain.TabIndex = 102;
@@ -284,8 +284,8 @@
             // btnCaptureAgain2
             // 
             this.btnCaptureAgain2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaptureAgain2.Location = new System.Drawing.Point(958, 191);
-            this.btnCaptureAgain2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCaptureAgain2.Location = new System.Drawing.Point(958, 192);
+            this.btnCaptureAgain2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCaptureAgain2.Name = "btnCaptureAgain2";
             this.btnCaptureAgain2.Size = new System.Drawing.Size(93, 31);
             this.btnCaptureAgain2.TabIndex = 103;
@@ -298,7 +298,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1177, 926);
+            this.ClientSize = new System.Drawing.Size(1177, 878);
             this.Controls.Add(this.btnCaptureAgain2);
             this.Controls.Add(this.btnCaptureAgain);
             this.Controls.Add(this.cboDevices2);
@@ -314,8 +314,9 @@
             this.Controls.Add(this.btndescargar);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrthoAnalisis";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
