@@ -102,14 +102,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto.exe" size="72104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto.exe" size="142760">
       <assemblyIdentity name="Proyecto" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>A+KKodHk2XFdZkRpKxyM6hmQ0jgcwc59FuQ/OLjGy+A=</dsig:DigestValue>
+        <dsig:DigestValue>cmOSDahkQlj77f5gCH24jvaq5B9nm7bBRhrQrjohePg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

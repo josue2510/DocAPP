@@ -18,6 +18,7 @@ namespace Proyecto
         private bool ExistDevices;
         private FilterInfoCollection MyDevices;
         private VideoCaptureDevice MyWebCam;
+        private VideoCaptureDevice MyWebCam2;
         public Form1()
         {
             InitializeComponent();
@@ -30,7 +31,6 @@ namespace Proyecto
 
             string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE", txtnombres.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@APELLIDO", txtApellidos.Text);
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@EDAD", txtEdad.Text);
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@GENERO", txtGenero.Text);
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DIAGNOSTICO", txtDiagnostico.Text);
@@ -75,7 +75,6 @@ namespace Proyecto
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadDevices();
-            btnTakePhoto.Visible = false;
             btndescargar.Visible = false;
         }
 
@@ -85,9 +84,12 @@ namespace Proyecto
             if (MyDevices.Count > 0)
             {
                 ExistDevices = true;
-                for (int i = 0; i < MyDevices.Count; i++)
-                    cboDevices.Items.Add(MyDevices[i].Name.ToString());
+                for (int i = 0; i < MyDevices.Count; i++) { 
+                        cboDevices.Items.Add(MyDevices[i].Name.ToString());
+                        cboDevices2.Items.Add(MyDevices[i].Name.ToString());
+                    }
                 cboDevices.Text = MyDevices[0].Name.ToString();
+                cboDevices2.Text = MyDevices[0].Name.ToString();
             }
             else
                 ExistDevices = false;
@@ -101,10 +103,25 @@ namespace Proyecto
                 MyWebCam = null;
             }
         }
+
+        private void CloseWebCam2()
+        {
+            if (MyWebCam2 != null && MyWebCam2.IsRunning)
+            {
+                MyWebCam2.SignalToStop();
+                MyWebCam2 = null;
+            }
+        }
+
         private new void Capture(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox1.Width,picBox1.Height));
             picBox1.Image = image;
+        }
+        private new void Capture2(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox2.Width, picBox2.Height));
+            picBox2.Image = image;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -112,7 +129,7 @@ namespace Proyecto
             CloseWebCam();
         }
 
-        private void btnStartCamera_Click(object sender, EventArgs e)
+        private void startCamera1(object sender, EventArgs e)
         {
             if (ExistDevices)
             {
@@ -122,18 +139,43 @@ namespace Proyecto
                 MyWebCam = new VideoCaptureDevice(deviceName);
                 MyWebCam.NewFrame += new NewFrameEventHandler(Capture);
                 MyWebCam.Start();
-                btnTakePhoto.Visible = true;
+                btnTakePhoto.Enabled = true;
+            }
+        }
+        private void startCamera2(object sender, EventArgs e)
+        {
+            if (ExistDevices)
+            {
+                CloseWebCam2();
+                int i = cboDevices2.SelectedIndex;
+                string deviceName = MyDevices[i].MonikerString;
+                MyWebCam2 = new VideoCaptureDevice(deviceName);
+                MyWebCam2.NewFrame += new NewFrameEventHandler(Capture2);
+                MyWebCam2.Start();
+                btnTakePhoto2.Enabled = true;
             }
         }
 
         private void btnTakePhoto_Click(object sender, EventArgs e)
         {
-            groupBox2.Visible = true;
             if (MyWebCam != null && MyWebCam.IsRunning)
             {
-                picBox2.Image = picBox1.Image;
+                CloseWebCam();
                 btndescargar.Visible = true;
+                btnTakePhoto.Enabled = false;
             }
         }
+
+        private void btnTakePhoto2_Click(object sender, EventArgs e)
+        {
+            if (MyWebCam2 != null && MyWebCam2.IsRunning)
+            {
+                CloseWebCam2();
+                btndescargar.Visible = true;
+                btnTakePhoto2.Enabled = false;
+            }
+        }
+
+
     }
 }
