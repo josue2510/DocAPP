@@ -30,7 +30,6 @@ namespace Proyecto
         {
             if (validateFields()) {
                 SaveFileDialog savefile = new SaveFileDialog();
-                savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmmss"));
 
                 string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE", txtnombres.Text);
@@ -38,6 +37,9 @@ namespace Proyecto
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@GENERO", combosex.SelectedItem.ToString());
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DIAGNOSTICO", txtDiagnostico.Text);
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+
+
+                savefile.FileName = string.Format("{0}-{1}.pdf", txtnombres.Text ,DateTime.Now.ToString("dd/MM/yyyy"));
 
 
                 if (savefile.ShowDialog() == DialogResult.OK)
@@ -76,7 +78,7 @@ namespace Proyecto
                 }
             } else
             {
-                MessageBox.Show("Llene Todos los Campos y Capture las Dos Imagenes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Llene Todos los Campos y Capture las dos Imagenes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private bool validateFields()
@@ -140,7 +142,7 @@ namespace Proyecto
             Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox1.Width,picBox1.Height));
             picBox1.Image = image;
         }
-        private new void Capture2(object sender, NewFrameEventArgs eventArgs)
+        private void Capture2(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox2.Width, picBox2.Height));
             picBox2.Image = image;
