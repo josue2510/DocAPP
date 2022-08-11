@@ -148,5 +148,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retry_icon_149879.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\olivos.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

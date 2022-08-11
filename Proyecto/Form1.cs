@@ -19,6 +19,8 @@ namespace Proyecto
         private FilterInfoCollection MyDevices;
         private VideoCaptureDevice MyWebCam;
         private VideoCaptureDevice MyWebCam2;
+        private bool photoTaken1 = false;
+        private bool photoTaken2 = false;
         public Form1()
         {
             InitializeComponent();
@@ -26,56 +28,69 @@ namespace Proyecto
 
         private void btndescargar_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+            if (validateFields()) {
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmmss"));
 
-            string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE", txtnombres.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@EDAD", txtEdad.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@GENERO", txtGenero.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DIAGNOSTICO", txtDiagnostico.Text);
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
-           
+                string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE", txtnombres.Text);
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@EDAD", txtEdad.Text);
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@GENERO", combosex.SelectedItem.ToString());
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DIAGNOSTICO", txtDiagnostico.Text);
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
 
-            if (savefile.ShowDialog() == DialogResult.OK)
-            {
-                using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+
+                if (savefile.ShowDialog() == DialogResult.OK)
                 {
-                    Document pdfDoc = new Document(PageSize.A4,25,25,25,25);
-
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                    pdfDoc.Open();
-                    pdfDoc.Add(new Phrase(""));
-
-                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(picBox2.Image, System.Drawing.Imaging.ImageFormat.Png);
-                    img.ScaleToFit(550, 500);
-                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
-
-                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Bottom + 100);
-                    pdfDoc.Add(img);
-
-                    iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(Properties.Resources.marca, System.Drawing.Imaging.ImageFormat.Png);
-                    img2.ScaleToFit(60, 60);
-                    img2.Alignment = iTextSharp.text.Image.UNDERLYING;
-
-                    img2.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
-                    pdfDoc.Add(img2);
-
-                    using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                    using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
                     {
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-                    }
+                        Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
 
-                    pdfDoc.Close();
-                    stream.Close();
+                        PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                        pdfDoc.Open();
+                        pdfDoc.Add(new Phrase(""));
+
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(picBox2.Image, System.Drawing.Imaging.ImageFormat.Png);
+                        img.ScaleToFit(550, 500);
+                        img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                        img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Bottom + 100);
+                        pdfDoc.Add(img);
+
+                        iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(Properties.Resources.olivos, System.Drawing.Imaging.ImageFormat.Png);
+                        img2.ScaleToFit(60, 60);
+                        img2.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                        img2.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                        pdfDoc.Add(img2);
+
+                        using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                        {
+                            XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                        }
+
+                        pdfDoc.Close();
+                        stream.Close();
+                        btnDeleteAll_Click(sender, e);
+                    }
                 }
+            } else
+            {
+                MessageBox.Show("Llene Todos los Campos y Capture las Dos Imagenes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private bool validateFields()
+        {
+            return ( photoTaken1 && photoTaken2 
+                && txtDiagnostico.Text.Length > 0
+                && txtEdad.Text.Length > 0
+                && txtnombres.Text.Length > 0 ? true : false);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadDevices();
-            btndescargar.Visible = false;
+            combosex.SelectedIndex = 0;
         }
 
         public void LoadDevices()
@@ -112,6 +127,13 @@ namespace Proyecto
                 MyWebCam2 = null;
             }
         }
+        private void resetFields()
+        {
+            txtnombres.ResetText();
+            txtEdad.ResetText();
+            txtDiagnostico.ResetText();
+            combosex.SelectedIndex=0;
+        }
 
         private new void Capture(object sender, NewFrameEventArgs eventArgs)
         {
@@ -127,6 +149,7 @@ namespace Proyecto
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             CloseWebCam();
+            CloseWebCam2();
         }
 
         private void startCamera1(object sender, EventArgs e)
@@ -134,12 +157,13 @@ namespace Proyecto
             if (ExistDevices)
             {
                 CloseWebCam();
+                photoTaken1 = false;
                 int i = cboDevices.SelectedIndex;
                 string deviceName = MyDevices[i].MonikerString;
                 MyWebCam = new VideoCaptureDevice(deviceName);
                 MyWebCam.NewFrame += new NewFrameEventHandler(Capture);
                 MyWebCam.Start();
-                btnTakePhoto.Enabled = true;
+                btnTakePhoto.Visible = true;
             }
         }
         private void startCamera2(object sender, EventArgs e)
@@ -147,12 +171,13 @@ namespace Proyecto
             if (ExistDevices)
             {
                 CloseWebCam2();
+                photoTaken2 = false;
                 int i = cboDevices2.SelectedIndex;
                 string deviceName = MyDevices[i].MonikerString;
                 MyWebCam2 = new VideoCaptureDevice(deviceName);
                 MyWebCam2.NewFrame += new NewFrameEventHandler(Capture2);
                 MyWebCam2.Start();
-                btnTakePhoto2.Enabled = true;
+                btnTakePhoto2.Visible = true;
             }
         }
 
@@ -160,9 +185,10 @@ namespace Proyecto
         {
             if (MyWebCam != null && MyWebCam.IsRunning)
             {
+                photoTaken1 = true;
                 CloseWebCam();
-                btndescargar.Visible = true;
-                btnTakePhoto.Enabled = false;
+                btnTakePhoto.Visible = false;
+                btnCaptureAgain.Visible = true;
             }
         }
 
@@ -170,12 +196,21 @@ namespace Proyecto
         {
             if (MyWebCam2 != null && MyWebCam2.IsRunning)
             {
+                photoTaken2 = true;
                 CloseWebCam2();
-                btndescargar.Visible = true;
-                btnTakePhoto2.Enabled = false;
+                btnCaptureAgain2.Visible = true;
+                btnTakePhoto2.Visible = false;
             }
         }
 
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            startCamera1(sender, e);
+            startCamera2(sender, e);
+            resetFields();
+            photoTaken1 = false;
+            photoTaken2 = false;
+        }
 
     }
 }
