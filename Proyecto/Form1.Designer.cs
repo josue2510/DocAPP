@@ -235,7 +235,7 @@
             // 
             // picBox2
             // 
-            this.picBox2.Location = new System.Drawing.Point(630, 190);
+            this.picBox2.Location = new System.Drawing.Point(631, 190);
             this.picBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picBox2.Name = "picBox2";
             this.picBox2.Size = new System.Drawing.Size(583, 628);
