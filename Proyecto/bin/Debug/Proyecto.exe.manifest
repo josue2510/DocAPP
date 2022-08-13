@@ -102,14 +102,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto.exe" size="72104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto.exe" size="198056">
       <assemblyIdentity name="Proyecto" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>A+KKodHk2XFdZkRpKxyM6hmQ0jgcwc59FuQ/OLjGy+A=</dsig:DigestValue>
+        <dsig:DigestValue>1XGX9+DuHluzmOlS4w8awPxEG/8q94O4dAlvHatx1Fw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -120,6 +120,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>FihlZtVNgcNyH37Pf0Jtll3jZOm+L55ijXNjtoS2/mo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\olivos.png" size="24212">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BVr1ld57kFfhWZQiMTBAt/NRi2LAFzmvTfyJfdrvD3k=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

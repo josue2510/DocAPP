@@ -63,9 +63,29 @@ namespace Proyecto.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camera {
+            get {
+                object obj = ResourceManager.GetObject("camera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap marca {
             get {
                 object obj = ResourceManager.GetObject("marca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap olivos {
+            get {
+                object obj = ResourceManager.GetObject("olivos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -81,23 +101,44 @@ namespace Proyecto.Properties {
         ///        }
         ///
         ///            table.border th {
-        ///                padding: 5px;
+        ///                padding: 15px;
         ///                border: 1px solid black;
         ///            }
         ///
         ///            table.border td {
-        ///                padding: 5px;
+        ///                padding: 15px;
         ///                border: 1px solid black;
         ///            }
         ///    &lt;/style&gt;
         ///&lt;/head&gt;
         ///&lt;body&gt;
-        ///    &lt;table style=&quot;width:100%&quot;&gt;
-        ///        [rest of string was truncated]&quot;;.
+        ///    &lt;table&gt;
+        ///        &lt;tr&gt;
+        ///           [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Plantilla {
             get {
                 return ResourceManager.GetString("Plantilla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap retry {
+            get {
+                object obj = ResourceManager.GetObject("retry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap retry_icon_149879 {
+            get {
+                object obj = ResourceManager.GetObject("retry_icon_149879", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
