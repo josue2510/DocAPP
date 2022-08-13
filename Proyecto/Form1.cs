@@ -32,14 +32,14 @@ namespace Proyecto
                 SaveFileDialog savefile = new SaveFileDialog();
 
                 string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
-                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE", txtnombres.Text);
-                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@EDAD", txtEdad.Text);
-                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@GENERO", combosex.SelectedItem.ToString());
-                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DIAGNOSTICO", txtDiagnostico.Text);
-                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Nombre", txtnombres.Text);
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Edad", txtEdad.Text);
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Genero", combosex.SelectedItem.ToString());
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Diagnostico", txtDiagnostico.Text);
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Fecha", DateTime.Now.ToString("dd/MM/yyyy"));
 
 
-                savefile.FileName = string.Format("{0}-{1}.pdf", txtnombres.Text ,DateTime.Now.ToString("dd/MM/yyyy"));
+                savefile.FileName = string.Format("{0}-{1}.pdf", txtnombres.Text.Replace(" ", "") ,DateTime.Now.ToString("dd-MM-yyyy"));
 
 
                 if (savefile.ShowDialog() == DialogResult.OK)
@@ -52,19 +52,27 @@ namespace Proyecto
                         pdfDoc.Open();
                         pdfDoc.Add(new Phrase(""));
 
-                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(picBox2.Image, System.Drawing.Imaging.ImageFormat.Png);
-                        img.ScaleToFit(550, 500);
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.olivos, System.Drawing.Imaging.ImageFormat.Png);
+                        img.ScaleToFit(120, 120);
                         img.Alignment = iTextSharp.text.Image.UNDERLYING;
 
-                        img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Bottom + 100);
+                        img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
                         pdfDoc.Add(img);
 
-                        iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(Properties.Resources.olivos, System.Drawing.Imaging.ImageFormat.Png);
-                        img2.ScaleToFit(60, 60);
+                        iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(picBox1.Image, System.Drawing.Imaging.ImageFormat.Png);
+                        img2.ScaleToFit(240, 240);
                         img2.Alignment = iTextSharp.text.Image.UNDERLYING;
 
-                        img2.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                        img2.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 262);
                         pdfDoc.Add(img2);
+
+
+                        iTextSharp.text.Image img3 = iTextSharp.text.Image.GetInstance(picBox2.Image, System.Drawing.Imaging.ImageFormat.Png);
+                        img3.ScaleToFit(250, 250);
+                        img3.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                        img3.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 8);
+                        pdfDoc.Add(img3);
 
                         using (StringReader sr = new StringReader(PaginaHTML_Texto))
                         {
