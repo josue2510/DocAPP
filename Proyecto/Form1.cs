@@ -10,6 +10,8 @@ using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
 using AForge.Video.DirectShow;
 using AForge.Video;
+using System.util;
+using OrthoAnalisis.Properties;
 
 namespace Proyecto
 {
@@ -31,7 +33,7 @@ namespace Proyecto
             if (validateFields()) {
                 SaveFileDialog savefile = new SaveFileDialog();
 
-                string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
+                string PaginaHTML_Texto = Resources.Plantilla.ToString();
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Nombre", txtnombres.Text);
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Edad", txtEdad.Text);
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@Genero", combosex.SelectedItem.ToString());
@@ -52,7 +54,7 @@ namespace Proyecto
                         pdfDoc.Open();
                         pdfDoc.Add(new Phrase(""));
 
-                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.olivos, System.Drawing.Imaging.ImageFormat.Png);
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Resources.olivos, System.Drawing.Imaging.ImageFormat.Png);
                         img.ScaleToFit(120, 120);
                         img.Alignment = iTextSharp.text.Image.UNDERLYING;
 

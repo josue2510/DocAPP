@@ -220,7 +220,7 @@
             // 
             // btnTakePhoto
             // 
-            this.btnTakePhoto.BackgroundImage = global::Proyecto.Properties.Resources.camera;
+            this.btnTakePhoto.BackgroundImage = global::OrthoAnalisis.Properties.Resources.camera;
             this.btnTakePhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTakePhoto.FlatAppearance.BorderSize = 0;
             this.btnTakePhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -267,7 +267,7 @@
             // 
             // btnTakePhoto2
             // 
-            this.btnTakePhoto2.BackgroundImage = global::Proyecto.Properties.Resources.camera;
+            this.btnTakePhoto2.BackgroundImage = global::OrthoAnalisis.Properties.Resources.camera;
             this.btnTakePhoto2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTakePhoto2.FlatAppearance.BorderSize = 0;
             this.btnTakePhoto2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -294,7 +294,7 @@
             // btnCaptureAgain
             // 
             this.btnCaptureAgain.BackColor = System.Drawing.Color.Transparent;
-            this.btnCaptureAgain.BackgroundImage = global::Proyecto.Properties.Resources.retry;
+            this.btnCaptureAgain.BackgroundImage = global::OrthoAnalisis.Properties.Resources.retry;
             this.btnCaptureAgain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCaptureAgain.FlatAppearance.BorderSize = 0;
             this.btnCaptureAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -310,7 +310,7 @@
             // 
             // btnCaptureAgain2
             // 
-            this.btnCaptureAgain2.BackgroundImage = global::Proyecto.Properties.Resources.retry;
+            this.btnCaptureAgain2.BackgroundImage = global::OrthoAnalisis.Properties.Resources.retry;
             this.btnCaptureAgain2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCaptureAgain2.FlatAppearance.BorderSize = 0;
             this.btnCaptureAgain2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

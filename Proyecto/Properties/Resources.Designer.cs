@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto.Properties {
+namespace OrthoAnalisis.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Proyecto.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Proyecto.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OrthoAnalisis.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -91,30 +91,30 @@ namespace Proyecto.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        ///   Looks up a localized string similar to 
+        ///&lt;!DOCTYPE html&gt;
         ///&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-        ///&lt;head&gt;
-        ///    &lt;title&gt;Title of the document&lt;/title&gt;
+        ///&lt;body&gt;
         ///    &lt;style&gt;
-        ///        table.border {
-        ///            border-collapse: collapse;
+        ///        * {
+        ///            box-sizing: border-box;
         ///        }
         ///
-        ///            table.border th {
-        ///                padding: 15px;
-        ///                border: 1px solid black;
-        ///            }
+        ///        /* Create two equal columns that floats next to each other */
+        ///        .column {
+        ///            float: left;
+        ///        }
         ///
-        ///            table.border td {
-        ///                padding: 15px;
-        ///                border: 1px solid black;
-        ///            }
-        ///    &lt;/style&gt;
-        ///&lt;/head&gt;
-        ///&lt;body&gt;
-        ///    &lt;table&gt;
-        ///        &lt;tr&gt;
-        ///           [rest of string was truncated]&quot;;.
+        ///        /* Clear floats after the columns */
+        ///        .row:after {
+        ///            content: &quot;&quot;;
+        ///            display: table;
+        ///            clear: both;
+        ///        }
+        ///
+        ///        .midmargin {
+        ///            padding: 4px 2px;
+        ///            margin:  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Plantilla {
             get {

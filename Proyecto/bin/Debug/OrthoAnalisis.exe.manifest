@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Proyecto.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="OrthoAnalisis.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Proyecto" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-    <commandLine file="Proyecto.exe" parameters="" />
+    <assemblyIdentity name="OrthoAnalisis" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
+    <commandLine file="OrthoAnalisis.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -102,18 +102,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto.exe" size="198056">
-      <assemblyIdentity name="Proyecto" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OrthoAnalisis.exe" size="198056">
+      <assemblyIdentity name="OrthoAnalisis" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VsZtP0ORTGwAVIjWH2g0BK8iB0+f+RVhnTnjZry6TuY=</dsig:DigestValue>
+        <dsig:DigestValue>6lJs+KzMM0pGgZQjtJW7JKS4snoyIdzZhVC5PgaJA3g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Proyecto.exe.config" size="184">
+  <file name="OrthoAnalisis.exe.config" size="184">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
