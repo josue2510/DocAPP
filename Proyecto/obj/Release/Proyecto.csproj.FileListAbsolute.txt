@@ -23,3 +23,28 @@ C:\Users\froil\Downloads\DocAPP\Proyecto\obj\Release\OrthoAnalisis.application
 C:\Users\froil\Downloads\DocAPP\Proyecto\obj\Release\Proyecto.csproj.CopyComplete
 C:\Users\froil\Downloads\DocAPP\Proyecto\obj\Release\OrthoAnalisis.exe
 C:\Users\froil\Downloads\DocAPP\Proyecto\obj\Release\OrthoAnalisis.pdb
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\OrthoAnalisis.exe.config
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\OrthoAnalisis.exe.manifest
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\OrthoAnalisis.application
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\OrthoAnalisis.exe
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\OrthoAnalisis.pdb
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\AForge.dll
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\AForge.Video.DirectShow.dll
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\AForge.Video.dll
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\itextsharp.dll
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\itextsharp.xmlworker.dll
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\AForge.xml
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\AForge.Video.xml
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\AForge.Video.DirectShow.xml
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\bin\Release\itextsharp.xml
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\Proyecto.csproj.AssemblyReference.cache
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\Proyecto.Form1.resources
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\OrthoAnalisis.Properties.Resources.resources
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\Proyecto.csproj.GenerateResource.cache
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\OrthoAnalisis.exe.manifest
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\OrthoAnalisis.application
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\Proyecto.csproj.CopyComplete
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\OrthoAnalisis.exe
+C:\Users\Mlopez\Visual Studio\DocBazan\DocAPP\Proyecto\obj\Release\OrthoAnalisis.pdb

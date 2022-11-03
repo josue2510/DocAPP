@@ -21,8 +21,14 @@ namespace Proyecto
         private FilterInfoCollection MyDevices;
         private VideoCaptureDevice MyWebCam;
         private VideoCaptureDevice MyWebCam2;
+        private VideoCaptureDevice MyWebCam3;
+        private VideoCaptureDevice MyWebCam4;
+        private VideoCaptureDevice MyWebCam5;
         private bool photoTaken1 = false;
         private bool photoTaken2 = false;
+        private bool photoTaken3 = false;
+        private bool photoTaken4 = false;
+        private bool photoTaken5 = false;
         public Form1()
         {
             InitializeComponent();
@@ -52,7 +58,6 @@ namespace Proyecto
 
                         PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
                         pdfDoc.Open();
-                        pdfDoc.Add(new Phrase(""));
 
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Resources.olivos, System.Drawing.Imaging.ImageFormat.Png);
                         img.ScaleToFit(120, 120);
@@ -61,20 +66,43 @@ namespace Proyecto
                         img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
                         pdfDoc.Add(img);
 
-                        iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(picBox1.Image, System.Drawing.Imaging.ImageFormat.Png);
-                        img2.ScaleToFit(240, 240);
+                        iTextSharp.text.Image imgCamera1 = iTextSharp.text.Image.GetInstance(picBox1.Image, System.Drawing.Imaging.ImageFormat.Png);
+                        imgCamera1.ScaleToFit(240, 240);
+                        imgCamera1.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                        imgCamera1.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 262);
+                        pdfDoc.Add(imgCamera1);
+
+
+                        iTextSharp.text.Image imgCamera2 = iTextSharp.text.Image.GetInstance(picBox2.Image, System.Drawing.Imaging.ImageFormat.Png);
+                        imgCamera2.ScaleToFit(250, 250);
+                        imgCamera2.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                        imgCamera2.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 8);
+                        pdfDoc.Add(imgCamera2);
+
+                        pdfDoc.NewPage();
+
+                        iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(Resources.olivos, System.Drawing.Imaging.ImageFormat.Png);
+                        img2.ScaleToFit(120, 120);
                         img2.Alignment = iTextSharp.text.Image.UNDERLYING;
 
-                        img2.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 262);
+                        img2.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
                         pdfDoc.Add(img2);
 
+                        iTextSharp.text.Image imgCamera4 = iTextSharp.text.Image.GetInstance(picBox4.Image, System.Drawing.Imaging.ImageFormat.Png);
+                        imgCamera4.ScaleToFit(240, 240);
+                        imgCamera4.Alignment = iTextSharp.text.Image.ALIGN_LEFT;
 
-                        iTextSharp.text.Image img3 = iTextSharp.text.Image.GetInstance(picBox2.Image, System.Drawing.Imaging.ImageFormat.Png);
-                        img3.ScaleToFit(250, 250);
-                        img3.Alignment = iTextSharp.text.Image.UNDERLYING;
+                        imgCamera4.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 8);
+                        pdfDoc.Add(imgCamera4);
 
-                        img3.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 8);
-                        pdfDoc.Add(img3);
+                        iTextSharp.text.Image imgCamera5 = iTextSharp.text.Image.GetInstance(picBox5.Image, System.Drawing.Imaging.ImageFormat.Png);
+                        imgCamera5.ScaleToFit(250, 250);
+                        imgCamera5.Alignment = iTextSharp.text.Image.ALIGN_RIGHT;
+
+                        imgCamera5.SetAbsolutePosition(pdfDoc.LeftMargin + 170, pdfDoc.Bottom + 8);
+                        pdfDoc.Add(imgCamera5);
 
                         using (StringReader sr = new StringReader(PaginaHTML_Texto))
                         {
@@ -85,6 +113,7 @@ namespace Proyecto
                         stream.Close();
                         btnDeleteAll_Click(sender, e);
                     }
+                    
                 }
             } else
             {
@@ -93,7 +122,7 @@ namespace Proyecto
         }
         private bool validateFields()
         {
-            return ( photoTaken1 && photoTaken2 
+            return ( photoTaken1 && photoTaken2 && photoTaken3 && photoTaken4 && photoTaken5
                 && txtDiagnostico.Text.Length > 0
                 && txtEdad.Text.Length > 0
                 && txtnombres.Text.Length > 0 ? true : false);
@@ -114,9 +143,15 @@ namespace Proyecto
                 for (int i = 0; i < MyDevices.Count; i++) { 
                         cboDevices.Items.Add(MyDevices[i].Name.ToString());
                         cboDevices2.Items.Add(MyDevices[i].Name.ToString());
-                    }
+                        cboDevices3.Items.Add(MyDevices[i].Name.ToString());
+                        cboDevices4.Items.Add(MyDevices[i].Name.ToString());
+                        cboDevices5.Items.Add(MyDevices[i].Name.ToString());
+                }
                 cboDevices.Text = MyDevices[0].Name.ToString();
                 cboDevices2.Text = MyDevices[0].Name.ToString();
+                cboDevices3.Text = MyDevices[0].Name.ToString();
+                cboDevices4.Text = MyDevices[0].Name.ToString();
+                cboDevices5.Text = MyDevices[0].Name.ToString();
             }
             else
                 ExistDevices = false;
@@ -139,6 +174,34 @@ namespace Proyecto
                 MyWebCam2 = null;
             }
         }
+
+        private void CloseWebCam3()
+        {
+            if (MyWebCam3 != null && MyWebCam3.IsRunning)
+            {
+                MyWebCam3.SignalToStop();
+                MyWebCam3 = null;
+            }
+        }
+
+        private void CloseWebCam4()
+        {
+            if (MyWebCam4 != null && MyWebCam4.IsRunning)
+            {
+                MyWebCam4.SignalToStop();
+                MyWebCam4 = null;
+            }
+        }
+
+        private void CloseWebCam5()
+        {
+            if (MyWebCam5 != null && MyWebCam5.IsRunning)
+            {
+                MyWebCam5.SignalToStop();
+                MyWebCam5 = null;
+            }
+        }
+
         private void resetFields()
         {
             txtnombres.ResetText();
@@ -152,16 +215,38 @@ namespace Proyecto
             Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox1.Width,picBox1.Height));
             picBox1.Image = image;
         }
+
         private void Capture2(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox2.Width, picBox2.Height));
             picBox2.Image = image;
         }
 
+        private void Capture3(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox3.Width, picBox3.Height));
+            picBox3.Image = image;
+        }
+
+        private void Capture4(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox4.Width, picBox4.Height));
+            picBox4.Image = image;
+        }
+
+        private void Capture5(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap image = new Bitmap((Bitmap)eventArgs.Frame.Clone(), new Size(picBox5.Width, picBox5.Height));
+            picBox5.Image = image;
+        }
+
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             CloseWebCam();
             CloseWebCam2();
+            CloseWebCam3();
+            CloseWebCam4();
+            CloseWebCam5();
         }
 
         private void startCamera1(object sender, EventArgs e)
@@ -193,6 +278,51 @@ namespace Proyecto
             }
         }
 
+        private void startCamera3(object sender, EventArgs e)
+        {
+            if (ExistDevices)
+            {
+                CloseWebCam3();
+                photoTaken3 = false;
+                int i = cboDevices3.SelectedIndex;
+                string deviceName = MyDevices[i].MonikerString;
+                MyWebCam3 = new VideoCaptureDevice(deviceName);
+                MyWebCam3.NewFrame += new NewFrameEventHandler(Capture3);
+                MyWebCam3.Start();
+                btnTakePhoto3.Visible = true;
+            }
+        }
+
+        private void startCamera4(object sender, EventArgs e)
+        {
+            if (ExistDevices)
+            {
+                CloseWebCam4();
+                photoTaken4 = false;
+                int i = cboDevices4.SelectedIndex;
+                string deviceName = MyDevices[i].MonikerString;
+                MyWebCam4 = new VideoCaptureDevice(deviceName);
+                MyWebCam4.NewFrame += new NewFrameEventHandler(Capture4);
+                MyWebCam4.Start();
+                btnTakePhoto4.Visible = true;
+            }
+        }
+
+        private void startCamera5(object sender, EventArgs e)
+        {
+            if (ExistDevices)
+            {
+                CloseWebCam5();
+                photoTaken5 = false;
+                int i = cboDevices5.SelectedIndex;
+                string deviceName = MyDevices[i].MonikerString;
+                MyWebCam5 = new VideoCaptureDevice(deviceName);
+                MyWebCam5.NewFrame += new NewFrameEventHandler(Capture5);
+                MyWebCam5.Start();
+                btnTakePhoto5.Visible = true;
+            }
+        }
+
         private void btnTakePhoto_Click(object sender, EventArgs e)
         {
             if (MyWebCam != null && MyWebCam.IsRunning)
@@ -215,14 +345,53 @@ namespace Proyecto
             }
         }
 
+        private void btnTakePhoto3_Click(object sender, EventArgs e)
+        {
+            if (MyWebCam3 != null && MyWebCam3.IsRunning)
+            {
+                photoTaken3 = true;
+                CloseWebCam3();
+                btnCaptureAgain3.Visible = true;
+                btnTakePhoto3.Visible = false;
+            }
+        }
+
+        private void btnTakePhoto4_Click(object sender, EventArgs e)
+        {
+            if (MyWebCam4 != null && MyWebCam4.IsRunning)
+            {
+                photoTaken4 = true;
+                CloseWebCam4();
+                btnCaptureAgain4.Visible = true;
+                btnTakePhoto4.Visible = false;
+            }
+        }
+
+        private void btnTakePhoto5_Click(object sender, EventArgs e)
+        {
+            if (MyWebCam5 != null && MyWebCam5.IsRunning)
+            {
+                photoTaken5 = true;
+                CloseWebCam5();
+                btnCaptureAgain5.Visible = true;
+                btnTakePhoto5.Visible = false;
+            }
+        }
+
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
             startCamera1(sender, e);
             startCamera2(sender, e);
+            startCamera3(sender, e);
+            startCamera4(sender, e);
+            startCamera5(sender, e);
+
             resetFields();
             photoTaken1 = false;
             photoTaken2 = false;
+            photoTaken3 = false;
+            photoTaken4 = false;
+            photoTaken5 = false;
         }
-
     }
 }
